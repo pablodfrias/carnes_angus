@@ -24,11 +24,6 @@ section article {
     color: white;
 }
 
-.navegacion {
-    color: beige;
-    background-color: rgb(202, 145, 145);
-}
-
 .centrar {
     text-align: center;
 }
@@ -49,6 +44,7 @@ section article {
 .fondoTitulos {
     color: black;
     background-color: grey;
+    text-align: center;
 }
 
 .ul {
@@ -67,9 +63,6 @@ div {
     display: inline-block;
 }
 
-nav {
-    width: 100%;
-}
 
 .navegacion li a:hover {
     background-color: grey;
@@ -90,8 +83,40 @@ nav {
 .formulario {
     list-style-type: none;
 }
-.barranav{
+
+.barranav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+    height: 50px;
+    align-items: center;
+}
+
+h3 {
+    background-color: darkcyan;
+    color: black;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+    width: 70%;
+    align-items: center;
+}
+
+.contenedor_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+
+header {
+    display: flex;
+}
+
+.logo {
+    width: 30%;
 }
