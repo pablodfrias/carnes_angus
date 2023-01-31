@@ -29,19 +29,6 @@ section article {
     text-align: center;
 }
 
-.navegacion li a {
-    text-decoration: none;
-    color: aliceblue;
-    background-color: black;
-    padding: 2px;
-}
-
-.catsandstars {
-    background-image: url("../assets/15635757_5643919.jpg");
-    background-repeat: no-repeat;
-
-}
-
 .fondoTitulos {
     color: black;
     background-color: grey;
@@ -74,23 +61,16 @@ div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    justify-content: center;
 }
 
 .galeria img {
-    width: 30%;
-    padding: 5px;
+    width: 100%;
+    gap: 10px;
 }
 
 .formulario {
     list-style-type: none;
-}
-
-.barranav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    height: 50px;
-    align-items: center;
 }
 
 h3 {
@@ -99,13 +79,7 @@ h3 {
     text-align: center;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    justify-content: flex-end;
-    width: 70%;
-    align-items: center;
-}
+
 
 .contenedor_logo {
     display: flex;
@@ -121,3 +95,70 @@ header {
 .logo {
     width: 30%;
 }
+
+.carrousel{
+    display: grid;
+    width: auto;
+    height: auto;
+    align-items: center;
+}
+
+.contenedor_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "encabezado"
+                            "principal"
+                            "pie_de_pagina";
+}
+
+.encabezado {
+    grid-area: encabezado;
+    justify-content: end;
+    display: inline-block;
+}
+
+.principal {
+    grid-area: principal;
+}
+
+.pie_de_pagina{
+    grid-area: pie_de_pagina;
+}
+
+@media screen and (min-width: 720px) {
+    .contenedor_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .encabezado{
+        justify-content: end;
+        display: block;        
+    }
+    .galeria img{
+        width: 48%;
+        gap: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .contenedor_grid {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows:     auto auto auto;
+        grid-template-areas:    "encabezado     encabezado"
+                                "principal     principal"
+                                "pie_de_pagina      pie_de_pagina";
+    }
+    .encabezado{
+        justify-content: end;
+    }
+
+    .galeria img{
+        width: 100%;
+       
+    }
+    }
