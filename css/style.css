@@ -5,6 +5,10 @@
     font-family: system-ui, 'Segoe UI';
 }
 
+h2 {
+    background-image: linear-gradient(grey, violet);
+}
+
 h1 {
     background-color: rgba(58, 49, 230, 0.644);
     color: rgb(87, 30, 30);
@@ -124,6 +128,18 @@ header {
 
 .pie_de_pagina{
     grid-area: pie_de_pagina;
+    animation-duration: 2s;
+    animation-name: desaparece;
+    animation-iteration-count: infinite;
+}
+
+@keyframes desaparece{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 720px) {
@@ -158,7 +174,7 @@ header {
     }
 
     .galeria img{
-        width: 100%;
-       
+        width: 50%;
+       gap: 10px;
     }
     }
